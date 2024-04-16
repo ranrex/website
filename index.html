@@ -30,7 +30,7 @@
       text-decoration: underline; /* Underline on hover */
     }
 
-    @media (max-width: 768px) {
+   @media (max-width: 768px) {
       /* Mobile devices */
       .container {
         padding-right: 5vw; /* 5% of the viewport width */
@@ -39,6 +39,11 @@
       p {
         /* Ensure at least 2 words per line */
         word-break: break-word;
+      }
+
+      .force-break {
+        /* Force this part of the text onto the next line */
+        word-break: break-all;
       }
     }
 
@@ -53,7 +58,7 @@
 <body>
 
 <div class="container">
-  <p>Ran-Re Reimann, Paris based graphic designer, working within the field of art, culture & space design <br>
+  <p>Ran-Re Reimann, Paris based graphic designer, working within the field of art,<span class="force-break"> culture & space design</span><br>
 born 1996, Tallin, Estonia <br>
 <a href="mailto:ranrereimann@gmail.com">ranrereimann@gmail.com</a></p>
 </div>
