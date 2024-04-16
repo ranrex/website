@@ -11,16 +11,25 @@
 
     .container {
       padding: 8px;
-      padding-right: 33vw;
     }
-
-    @media (max-width: 768px) { /* Adjust the width as per your mobile viewport */
-      .container {
-        padding-right: 5vw; /* 5% of the viewport width */
 
     p {
       font-size: 1em;
       margin: 0; /* Remove default margin */
+    }
+
+    @media (max-width: 768px) {
+      /* Mobile devices */
+      .container {
+        padding-right: 5vw; /* 5% of the viewport width */
+      }
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+      /* Tablets */
+      .container {
+        padding-right: 33vw; /* 33% of the viewport width */
+      }
     }
   </style>
 </head>
