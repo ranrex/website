@@ -25,11 +25,24 @@
       text-decoration: underline; /* Underline on hover */
     }
 
+    video {
+      width: auto;
+      height: 90vh;
+      margin-top: 8px;
+    }
+
    @media (max-width: 768px) {
       /* Mobile devices */
       .container {
         padding-right: 5vw; /* 5% of the viewport width */
       }
+
+      video {
+        width: 100%;
+        height: auto;
+      }
+
+
 
        p {
       font-size: 0.9em;
@@ -43,7 +56,8 @@
         padding-right: 33vw; /* 33% of the viewport width */
       }
       .mobile-break {
-        display: none;}
+        display: none;
+      }
     }
   </style>
 </head>
@@ -53,6 +67,9 @@
   <p>Ran-Re Reimann, Paris based graphic designer, <br class="mobile-break">working within the field of art, culture & space design
 <br><a href="mailto:ranrereimann@gmail.com">ranrereimann@gmail.com</a></p>
 </div>
+<video width="100%" height="100%" autoplay loop muted>
+  <source src="portfolio.mp4" type="video/mp4" />
+</video>
 
 </body>
 </html>
