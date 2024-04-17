@@ -24,21 +24,10 @@
       text-decoration: underline; /* Underline on hover */
     }
 
-    video {
-      width: auto;
-      height: 90vh;
+   .gif {
       margin-top: 8px;
-    }
-
-    .play-button {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 1;
-      cursor: pointer;
-      display: none;
-    }
+      width: auto; 
+      height: 60vh;
 
     @media (max-width: 768px) {
       /* Mobile devices */
@@ -46,26 +35,21 @@
         padding-right: 5vw; /* 5% of the viewport width */
       }
 
-      video {
-        width: 100%;
-        height: auto;
-      }
-
       p {
         font-size: 0.9em;
         line-height: 113%;
-        margin: 0; /* Remove default margin */
      }
+
+     .gif {
+      width: 100%; 
+      height: auto;
+
     }
 
     @media (min-width: 769px) {
       /* Desktop devices */
       .container {
         padding-right: 33vw; /* 33% of the viewport width */
-      }
-
-      .play-button {
-        display: none; /* Hide play button on desktop */
       }
 
       .mobile-break {
@@ -77,32 +61,15 @@
 <body>
 
 <div class="container">
-  <p>Ran-Re Reimann, Paris based graphic designer, <br class="mobile-break">working within the field of art, culture & space design
-<br><a href="mailto:ranrereimann@gmail.com">ranrereimann@gmail.com</a></p>
+    <p>Ran-Re Reimann, Paris based graphic designer, <br class="mobile-break">working within the field of art, culture & space design
+  <br><a href="mailto:ranrereimann@gmail.com">ranrereimann@gmail.com</a></p>
 </div>
 
-<video id="myVideo" controls autoplay loop muted>
-  <source src="portfolio.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
-
-<div class="play-button" onclick="playPause()">
-  <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24">
-    <path d="M8 5v14l11-7z"/>
-  </svg>
+<div class="gif-container">
+  <img class="gif" src="portfolio.gif" alt="Portfolio GIF">
 </div>
 
-<script>
-  function playPause() {
-    var video = document.getElementById("myVideo");
-    if (video.paused) {
-      video.play();
-      document.querySelector('.play-button').style.display = 'none';
-    } else {
-      video.pause();
-    }
-  }
-</script>
+
 
 </body>
 </html>
